@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="timeline.lizimumu.com.t">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:name="timeline.lizimumu.com.app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="timeline.lizimumu.com.ui.ActivityMain"
+            android:launchMode="singleTask" />
+
+        <service android:name="timeline.lizimumu.com.service.AppService" />
+        <service android:name="timeline.lizimumu.com.service.AlarmService" />
+        <receiver
+            android:name="timeline.lizimumu.com.receiver.AlarmReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="ALARM_RECEIVER" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.appsflyer.SingleInstallBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="timeline.lizimumu.com.ui.ActivitySettings"
+            android:parentActivityName="timeline.lizimumu.com.ui.ActivityMain">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="timeline.lizimumu.com.ui.ActivityMain" />
+        </activity>
+        <activity
+            android:name="timeline.lizimumu.com.ui.ActivityDetails"
+            android:parentActivityName="timeline.lizimumu.com.ui.ActivityMain">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="timeline.lizimumu.com.ui.ActivityMain" />
+        </activity>
+        <activity
+            android:name="timeline.lizimumu.com.ui.ActivityIgnoring"
+            android:parentActivityName="timeline.lizimumu.com.ui.ActivitySettings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="timeline.lizimumu.com.ui.ActivitySettings" />
+        </activity>
+        <activity
+            android:name="timeline.lizimumu.com.ui.ActivityAbout"
+            android:parentActivityName="timeline.lizimumu.com.ui.ActivitySettings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="timeline.lizimumu.com.ui.ActivitySettings" />
+        </activity>
+        <activity
+            android:name="timeline.lizimumu.com.ui.ActivitySplash"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="about">Подробнее</string>
+    <string name="close">Закрыть</string>
+    <string name="detail">Детали</string>
+    <string name="duration">Длительность</string>
+    <string name="enable_apps_monitor">Включить мониторинг приложений</string>
+    <string name="enable_apps_monitoring">Мониторинг приложений</string>
+    <string name="grant_success">Гранд разрешение успешно</string>
+    <string name="hide_system_apps">Скрыть системные приложения</string>
+    <string name="hide_uninstall_apps">Скрыть неустановленные приложения</string>
+
+    <string name="ignore">Игнорировать это приложение</string>
+    <string name="ignore_hint">Приложения в этом списке будут скрыты</string>
+    <string name="ignore_list">Список игнорируемых приложений</string>
+    <string name="ignore_success">Успешно добавлено в игнор список</string>
+
+    <string name="more">Больше информации</string>
+    <string name="app_info">Информация о приложении</string>
+
+    <string name="notification_title">AppTimeline В работе</string>
+    <string name="notification_message">мониторинг использования ваших приложений</string>
+    <string name="not_support">Ваше устройство не поддерживает мониторинг</string>
+
+    <string name="open">Открыть</string>
+
+    <string name="refresh">Обновить</string>
+
+    <string name="settings">Настройки</string>
+    <string name="settings_function">Функции</string>
+    <string name="settings_more">Больше</string>
+    <string name="share">Поделиться</string>
+    <string name="share_desc">Эй, посмотрите это приложение, это так круто, это может помочь проверить каждое приложение время, которое вы тратите на: %1$s%2$s</string>
+    <string name="slogan">Monitor Apps usage</string>
+    <string name="sort">Сортировать по</string>
+
+    <string name="toast_permission">Пожалуйста, найдите \">App Usage Limiter\" и дайте разрешения</string>
+    <string name="times">%1$s · %2$d раз</string>
+    <string name="times_only">раз</string>
+    <string name="total">%1$s</string>
+
+    <string name="version">версия %1$s</string>
+
+    <string name="wifi_data">WiFi:%1$s · Mobile:%2$s</string>
+    <string name="interstitial" >Ваш Id</string>
+    <string name="admob" >Ваш Id</string>
+</resources>
